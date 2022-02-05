@@ -1,13 +1,13 @@
-package com.example.nacionalityservice;
+package com.example.leagueservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NacionalityServiceApplication {
+public class LeagueServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NacionalityServiceApplication.class, args);
+		SpringApplication.run(LeagueServiceApplication.class, args);
 	}
 
 }
