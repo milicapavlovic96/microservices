@@ -35,4 +35,5 @@ public class Competition {
 	public Long getId() {
 		return id;
 	}
+	
 }

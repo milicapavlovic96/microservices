@@ -55,7 +55,7 @@ public class CompetitionTeamService {
 
 		TeamDTO teamDTO = teamProxy.getTeam(teamId);
 		if (teamDTO == null) {
-			throw new EntityNotFoundException("Student with the given id does not exist.");
+			throw new EntityNotFoundException("Team with the given id does not exist.");
 		}
 
 		CompetitionDTO competitionDTO = competitionProxy.getCompetition(teamId);

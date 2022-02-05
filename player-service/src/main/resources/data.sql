@@ -1,3 +1,3 @@
-INSERT INTO Player VALUES (100, 'Aleksandar', 'Stojic');
-INSERT INTO Player VALUES (101, 'Nikola', 'Savic');
-INSERT INTO Player VALUES (102, 'Ivan', 'Jura');
+INSERT INTO Player VALUES (100, 'Aleksandar', 'Stojic', 100);
+INSERT INTO Player VALUES (101, 'Nikola', 'Savic', 100);
+INSERT INTO Player VALUES (102, 'Ivan', 'Jura', 100);

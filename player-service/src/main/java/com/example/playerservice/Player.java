@@ -15,13 +15,16 @@ public class Player {
 	private String playerName;
 
 	private String lastName;
+	
+	private Long teamId;
 
 	public Player() {
 	}
 
-	public Player(String playerName) {
+	public Player(String playerName, Long teamId) {
 		super();
 		this.playerName = playerName;
+		this.teamId = teamId;
 	}
 
 	public String getPlayerName() {
@@ -42,5 +45,13 @@ public class Player {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	public Long getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(Long teamId) {
+		this.teamId = teamId;
 	}
 }

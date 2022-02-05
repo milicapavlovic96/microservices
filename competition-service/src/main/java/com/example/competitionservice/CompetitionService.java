@@ -4,14 +4,18 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class CompetitionService {
 
 	@Autowired
 	CompetitionRepository competitionRepository;
-
+	
 	public List<Competition> getAllCompetitions() {
 		return competitionRepository.findAll();
 	}
@@ -25,6 +29,7 @@ public class CompetitionService {
 	}
 
 	public Competition createCompetition(Competition competition) {
+		
 		Optional<Competition> existingCompetition = competitionRepository.findById(competition.getId());
 		if (existingCompetition.isPresent()) {
 			throw new CompetitionAlreadyExistsException("Competition with the id " + competition.getId() + " already exists.");
