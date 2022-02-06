@@ -124,7 +124,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>mpavlovic/dis-${project.artifactId}:${project.version}</name>
+						<name>milicapavlovic/dis-${project.artifactId}:${project.version}</name>
 					</image>
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>			
 				</configuration>
