@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: league-service
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+  sleuth:
+    sampler:
+      probability: 1.0
+  main:
+    allow-circular-references: true
+
+server:
+  port: 8300
+
+resilience4j:
+  ratelimiter:
+    instances:
+      default:
+        limitForPeriod: 10
+        limitRefreshPeriod: 3s
