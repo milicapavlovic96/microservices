@@ -13,7 +13,7 @@ spring:
     allow-circular-references: true
 
 server:
-  port: 8100
+  port: 8400
 
 eureka:
   client:
