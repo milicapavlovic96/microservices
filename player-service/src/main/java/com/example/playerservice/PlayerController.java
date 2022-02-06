@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
+@RestController
+@CircuitBreaker(name = "default", fallbackMethod = "fallback")
 public class PlayerController {
 
 	@Autowired
@@ -49,5 +51,9 @@ public class PlayerController {
 		} catch (Exception e) {
 			return new ResponseEntity<String>("Player with the id " + id + " does not exsist.", HttpStatus.NOT_FOUND);
 		}
+	}
+	
+	public ResponseEntity fallback(RuntimeException e) {
+	    return new ResponseEntity<String>("Player service is taking too long to respond. Please try again later.", HttpStatus.SERVICE_UNAVAILABLE);
 	}
 }

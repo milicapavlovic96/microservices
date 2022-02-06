@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 @RestController
+@CircuitBreaker(name = "default", fallbackMethod = "fallback")
 public class TeamController {
 
 	@Autowired
@@ -47,5 +50,9 @@ public class TeamController {
 		} catch (Exception e) {
 			return new ResponseEntity<String>("Team with the id " + id + " does not exsist.", HttpStatus.NOT_FOUND);
 		}
+	}
+	
+	public ResponseEntity fallback(RuntimeException e) {
+	    return new ResponseEntity<String>("Team service is taking too long to respond. Please try again later.", HttpStatus.SERVICE_UNAVAILABLE);
 	}
 }
