@@ -104,6 +104,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
@@ -116,16 +117,18 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
+		
 	</dependencyManagement>
 	
 	<build>
+		<defaultGoal>install</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>milicapavlovic/dis-${project.artifactId}:${project.version}</name>
+						<name>milicapavlovic/${project.artifactId}:latest</name>
 					</image>
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>			
 				</configuration>

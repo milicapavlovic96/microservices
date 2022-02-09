@@ -49,6 +49,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -84,13 +90,20 @@
 	</dependencyManagement>
 
 	<build>
+	<defaultGoal>install</defaultGoal>
 		<plugins>
+			<plugin>
+			<groupId>com.spotify</groupId>
+            <artifactId>dockerfile-maven-plugin</artifactId>
+            <version>1.4.0</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${parent.version}</version> 
 				<configuration>
 					<image>
-						<name>milicapavlovic/dis-${project.artifactId}:${project.version}</name>
+						<name>milicapavlovic/${project.artifactId}:latest</name>
 					</image>
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>			
 				</configuration>

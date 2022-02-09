@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   config-server:
-    image: milicapavlovic/dis-config-server:0.0.1-SNAPSHOT
+    image: milicapavlovic/config-server:latest
     mem_limit: 700m
     ports:
       - "8888:8888"
@@ -10,7 +10,7 @@ services:
       - microservices-network
 
   service-registry:
-    image: milicapavlovic/dis-service-registry:0.0.1-SNAPSHOT
+    image: milicapavlovic/service-registry:latest
     mem_limit: 700m
     ports:
       - "8761:8761"
@@ -22,7 +22,7 @@ services:
       SPRING.CONFIG.IMPORT: optional:configserver:http://config-server:8888
 
   player-service:
-    image: milicapavlovic/dis-player-service:0.0.1-SNAPSHOT
+    image: milicapavlovic/player-service:latest
     mem_limit: 700m
     ports:
       - "8000:8000"
@@ -37,7 +37,7 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
 
   team-service:
-    image: milicapavlovic/dis-team-service:0.0.1-SNAPSHOT
+    image: milicapavlovic/team-service:latest
     mem_limit: 700m
     ports:
       - "8100:8100"
@@ -52,7 +52,7 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
 
   competition-team-service:
-    image: milicapavlovic/dis-competition-team-service:0.0.1-SNAPSHOT
+    image: milicapavlovic/competition-team-service:latest
     mem_limit: 700m
     ports:
       - "8200:8200"
@@ -67,7 +67,7 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
 
   league-service:
-    image: milicapavlovic/dis-league-service:0.0.1-SNAPSHOT
+    image: milicapavlovic/league-service:latest
     mem_limit: 700m
     ports:
       - "8300:8300"
@@ -82,7 +82,7 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
 
   competition-service:
-    image: milicapavlovic/dis-competition-service:0.0.1-SNAPSHOT
+    image: milicapavlovic/competition-service:latest
     mem_limit: 700m
     ports:
       - "8400:8400"
@@ -97,7 +97,7 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
 
   api-gateway:
-    image: milicapavlovic/dis-api-gateway:0.0.1-SNAPSHOT
+    image: milicapavlovic/api-gateway:latest
     mem_limit: 700m
     ports:
       - "8765:8765"

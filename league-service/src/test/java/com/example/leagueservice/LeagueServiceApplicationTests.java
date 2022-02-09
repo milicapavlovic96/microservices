@@ -1,10 +1,10 @@
-package com.example.nacionalityservice;
+package com.example.leagueservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NacionalityServiceApplicationTests {
+class LeagueServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

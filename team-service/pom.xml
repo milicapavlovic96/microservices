@@ -123,16 +123,11 @@
 	</dependencyManagement>
 	
 	<build>
+		<defaultGoal>install</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<image>
-						<name>milicapavlovic/dis-${project.artifactId}:${project.version}</name>
-					</image>
-					<pullPolicy>IF_NOT_PRESENT</pullPolicy>			
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

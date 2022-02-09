@@ -118,13 +118,14 @@
 	</dependencyManagement>
 	
 	<build>
+	    <defaultGoal>install</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>milicapavlovic/dis-${project.artifactId}:${project.version}</name>
+						<name>milicapavlovic/${project.artifactId}:latest</name>
 					</image>
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>			
 				</configuration>
