@@ -58,6 +58,6 @@ http://localhost:8765/{service-name}/{route} <br />
 Example: http://localhost:8765/player-service/players <br /> 
  <br /> 
 # Diagram 
- <br /> 
+
  ![Alt text](https://fv9-4.failiem.lv/thumb_show.php?i=mqb7bhgta&view "Title")
  
