@@ -56,6 +56,8 @@ http://localhost:9411/zipkin <br />
 -API Gateway <br /> 
 http://localhost:8765/{service-name}/{route} <br /> 
 Example: http://localhost:8765/player-service/players <br /> 
-
-
-
+ <br /> 
+# Diagram 
+ <br /> 
+ ![alt text](C:\Users\Milica\Desktop\diagram.jpg)
+ 
