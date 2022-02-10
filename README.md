@@ -60,6 +60,6 @@ Example: http://localhost:8765/player-service/players <br />
 # Diagram 
  <br /> 
  <p align="center">
-  <img src="C:\Users\Milica\Desktop\diagram.jpg" width="350" title="hover text">
+  <img src="https://files.fm/u/f8bu2vbbs" width="350" title="hover text">
  </p>
  
