@@ -59,5 +59,7 @@ Example: http://localhost:8765/player-service/players <br />
  <br /> 
 # Diagram 
  <br /> 
- ![alt text](C:\Users\Milica\Desktop\diagram.jpg)
+ <p align="center">
+  <img src="C:\Users\Milica\Desktop\diagram.jpg" width="350" title="hover text">
+ </p>
  
