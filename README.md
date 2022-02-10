@@ -61,3 +61,8 @@ Example: http://localhost:8765/player-service/players <br />
 
  ![Alt text](https://fv9-4.failiem.lv/thumb_show.php?i=mqb7bhgta&view "Title")
  
+ # Description
+ 
+ # Launching
+Open Command Prompt and navigate into the directory where project is (docker-compose.yaml must be present). Start up the Docker Engine, and run docker-compose up in Command Prompt.
+# Testing
