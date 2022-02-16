@@ -66,3 +66,7 @@ Example: http://localhost:8765/player-service/players <br />
  # Launching
 Open Command Prompt and navigate into the directory where project is (docker-compose.yaml must be present). Start up the Docker Engine, and run docker-compose up in Command Prompt.
 # Testing
+Eureka naming server's dashboard shows all the services that are up and running. <br /> 
+Zipkin server provides distributed tracing and can also create dependency graph after a few requests have been fired. <br /> 
+The collection of requests for Postman is provided in the Spring Cloud Microservices.postman_collection.json file.
+Postman's runner tool can also be used to test for rate limiting feature.  <br /> 
