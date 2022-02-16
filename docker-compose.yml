@@ -31,10 +31,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   team-service:
     image: milicapavlovic/team-service:latest
@@ -46,10 +50,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   competition-team-service:
     image: milicapavlovic/competition-team-service:latest
@@ -61,10 +69,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   league-service:
     image: milicapavlovic/league-service:latest
@@ -76,10 +88,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   competition-service:
     image: milicapavlovic/competition-service:latest
@@ -91,10 +107,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   api-gateway:
     image: milicapavlovic/api-gateway:latest
@@ -106,10 +126,14 @@ services:
     depends_on:
       - config-server
       - service-registry
+      - rabbitmq
     environment:
       SPRING.CONFIG.IMPORT: configserver:http://config-server:8888
       eureka.client.serviceUrl.defaultZone: http://service-registry:8761/eureka
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
 
   zipkin-server:
     image: openzipkin/zipkin:latest
