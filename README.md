@@ -29,23 +29,23 @@ POST http://localhost:8100/teams <br />
 DELETE http://localhost:1000/teams/{id} <br /> 
  <br /> 
 -Competition Team Service <br /> 
-GET http://localhost:8100/competition-team <br /> 
-GET http://localhost:8100/competition-by-team/{id} <br /> 
-GET http://localhost:8100/team-by-competition/{id} <br /> 
-POST http://localhost:8100/team/{id}/competition{id} <br /> 
-DELETE http://localhost:8100/team/{id}/competition{id} <br /> 
+GET http://localhost:8200/competition-team <br /> 
+GET http://localhost:8200/competition-by-team/{id} <br /> 
+GET http://localhost:8200/team-by-competition/{id} <br /> 
+POST http://localhost:8200/team/{id}/competition{id} <br /> 
+DELETE http://localhost:8200/team/{id}/competition{id} <br /> 
  <br /> 
 -League Service <br /> 
-GET http://localhost:8100/leagues <br /> 
-GET http://localhost:8100/leagues/{id} <br /> 
-POST http://localhost:8100/leagues <br /> 
-DELETE http://localhost:1000/leagues/{id} <br /> 
+GET http://localhost:8300/leagues <br /> 
+GET http://localhost:8300/leagues/{id} <br /> 
+POST http://localhost:8300/leagues <br /> 
+DELETE http://localhost:8300/leagues/{id} <br /> 
  <br /> 
 -Competition Service <br /> 
-GET http://localhost:8100/competitions <br /> 
-GET http://localhost:8100/competitions/{id} <br /> 
-POST http://localhost:8100/competitions <br /> 
-DELETE http://localhost:1000/competitions/{id} <br /> 
+GET http://localhost:8400/competitions <br /> 
+GET http://localhost:8400/competitions/{id} <br /> 
+POST http://localhost:8400/competitions <br /> 
+DELETE http://localhost:8400/competitions/{id} <br /> 
  <br /> 
 -Eureka Naming Server <br /> 
  http://localhost:8761/eureka <br /> 
