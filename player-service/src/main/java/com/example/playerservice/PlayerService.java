@@ -44,7 +44,7 @@ public class PlayerService {
 		TeamDTO teamDTO = teamProxy.getTeam(player.getTeamId());
 		
 		if (teamDTO == null) {
-			throw new EntityNotFoundException("Department with the given id does not exist.");
+			throw new EntityNotFoundException("Player with the given id does not exist.");
 		}
 
 		
